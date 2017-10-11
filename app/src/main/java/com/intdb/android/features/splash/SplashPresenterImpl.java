@@ -65,7 +65,7 @@ final class SplashPresenterImpl extends BasePresenterImpl<SplashView> implements
     public void launchNextActivity() {
         assert mView != null;
         mView.launchNextActivity();
-       // stopLoading();
+        stopLoading();
     }
 
     @Override
