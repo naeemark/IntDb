@@ -6,8 +6,13 @@ import com.intdb.android.app.presenter.impl.BasePresenterImpl;
 import com.intdb.android.features.catalog.interactor.CatalogInteractor;
 import com.intdb.android.features.catalog.presenter.CatalogPresenter;
 import com.intdb.android.features.catalog.view.CatalogView;
+import com.intdb.android.model.Movie;
+
+import java.util.List;
 
 import javax.inject.Inject;
+
+import timber.log.Timber;
 
 public final class CatalogPresenterImpl extends BasePresenterImpl<CatalogView> implements CatalogPresenter {
     /**
@@ -15,8 +20,6 @@ public final class CatalogPresenterImpl extends BasePresenterImpl<CatalogView> i
      */
     @NonNull
     private final CatalogInteractor mInteractor;
-
-    // The view is available using the mView variable
 
     @Inject
     public CatalogPresenterImpl(@NonNull CatalogInteractor interactor) {
@@ -27,23 +30,45 @@ public final class CatalogPresenterImpl extends BasePresenterImpl<CatalogView> i
     public void onStart(boolean viewCreated) {
         super.onStart(viewCreated);
 
-        // Your code here. Your view is available using mView and will not be null until next onStop()
+        if (viewCreated) {
+            mView.loadList();
+        }
+
     }
 
     @Override
-    public void onStop() {
-        // Your code here, mView will be null after this method until next onStart()
-
-        super.onStop();
+    public void loadMoviesPage(int pageNumber) {
+        if (!mInteractor.isNetworkConnected()) {
+            assert mView != null;
+            mView.showNetworkError();
+        } else {
+            mInteractor.fetchMoviesPage(pageNumber, this);
+        }
     }
 
     @Override
-    public void onPresenterDestroyed() {
-        /*
-         * Your code here. After this method, your presenter (and view) will be completely destroyed
-         * so make sure to cancel any HTTP call or database connection
-         */
+    public void onStart() {
+        assert mView != null;
+        mView.showLoading();
+    }
 
-        super.onPresenterDestroyed();
+    @Override
+    public void onDataResponse(List<Movie> list) {
+        assert mView != null;
+        mView.loadList(list);
+    }
+
+    @Override
+    public void onFailure(String message) {
+        Timber.d(message);
+        assert mView != null;
+        mView.hideLoading();
+        mView.showErrorLoading();
+    }
+
+    @Override
+    public void onComplete() {
+        assert mView != null;
+        mView.hideLoading();
     }
 }
