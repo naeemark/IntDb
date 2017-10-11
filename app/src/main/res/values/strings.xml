@@ -9,4 +9,7 @@
     <string name="error_no_network">No Network Available!</string>
     <string name="error_loading_data">Error Loading Data!</string>
 
+    <!--Labels-->
+    <string name="lbl_activity_catalog">Catalogue</string>
+
 </resources>

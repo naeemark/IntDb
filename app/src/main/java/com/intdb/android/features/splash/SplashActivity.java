@@ -10,6 +10,7 @@ import com.intdb.android.R;
 import com.intdb.android.app.injection.AppComponent;
 import com.intdb.android.app.presenter.loader.PresenterFactory;
 import com.intdb.android.app.view.impl.BaseActivity;
+import com.intdb.android.features.catalog.view.impl.CatalogActivity;
 
 import javax.inject.Inject;
 
@@ -65,7 +66,8 @@ public final class SplashActivity extends BaseActivity<SplashPresenter, SplashVi
 
     @Override
     public void launchNextActivity() {
-        // TODO:
+        Intent intent = new Intent(this, CatalogActivity.class);
+        startActivity(intent);
     }
 
     @Override
