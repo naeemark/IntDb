@@ -11,5 +11,6 @@
 
     <!--Labels-->
     <string name="lbl_activity_catalog">Catalogue</string>
+    <string name="lbl_poster">poster</string>
 
 </resources>

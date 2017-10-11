@@ -71,7 +71,7 @@ public final class CatalogActivity extends BaseActivity<CatalogPresenter, Catalo
 
     private void initializeList() {
         mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         mMoviesAdapter = new MoviesAdapter(getLayoutInflater());

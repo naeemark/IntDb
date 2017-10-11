@@ -12,6 +12,8 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.intdb.android.BuildConfig;
 
+import timber.log.Timber;
+
 /**
  * @author Naeem <naeemark@gmail.com>
  * @version 1.0.0
@@ -21,6 +23,9 @@ import com.intdb.android.BuildConfig;
 public class ImageUtils {
 
     public static void loadImage(Context context, ImageView imageView, final ProgressBar progressBar, String path) {
+
+        Timber.e("Path: "+ ImageUtils.getPosterUrl(path));
+
         Glide.with(context)
                 .load(ImageUtils.getPosterUrl(path))
                 .diskCacheStrategy(DiskCacheStrategy.RESULT)

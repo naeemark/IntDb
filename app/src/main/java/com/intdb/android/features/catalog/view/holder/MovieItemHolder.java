@@ -5,8 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
 import com.intdb.android.R;
 import com.intdb.android.features.catalog.view.impl.CatalogActivity;
@@ -30,18 +28,6 @@ public class MovieItemHolder extends RecyclerView.ViewHolder implements View.OnC
     @BindView(R.id.img_progress)
     protected ProgressBar imageProgressBar;
 
-    @BindView(R.id.textview_title)
-    protected TextView mTitle;
-    @BindView(R.id.textview_year)
-    protected TextView mYear;
-    @BindView(R.id.textview_averageVotes)
-    protected TextView mVoteAverage;
-    @BindView(R.id.textview_description)
-    protected TextView mDescription;
-    @BindView(R.id.ratingBar)
-    protected RatingBar ratingBar;
-
-
     private Context mContext;
     private Movie mMovie;
 
@@ -56,13 +42,8 @@ public class MovieItemHolder extends RecyclerView.ViewHolder implements View.OnC
 
     public void setValues(Movie movie) {
         mMovie = movie;
-        mTitle.setText(mMovie.getTitle());
-        mYear.setText("Realeased: " + mMovie.getReleaseDate());
-        mVoteAverage.setText(String.valueOf(mMovie.getVoteAverage()));
-        ratingBar.setRating((float) (mMovie.getVoteAverage()/2.0));
-        mDescription.setText(mMovie.getOverview());
 
-        ImageUtils.loadImage(mContext, mLogoImageView, imageProgressBar,  movie.getPosterPath());
+        ImageUtils.loadImage(mContext, mLogoImageView, imageProgressBar,  mMovie.getPosterPath());
     }
 
     @Override
