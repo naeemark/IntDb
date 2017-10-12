@@ -1,5 +1,6 @@
 package com.intdb.android.webapi;
 
+import com.intdb.android.BuildConfig;
 import com.intdb.android.model.response.MoviesListResponse;
 
 import retrofit2.http.GET;
@@ -13,8 +14,15 @@ import rx.Observable;
 
 public interface MoviesApiService {
 
-    @GET("movie/popular?api_key=7a4a2330f51514657f80707a217bcf9d&language=en_US")
-    Observable<MoviesListResponse> getMovies(@Query("page") String pageNumber);
+    // https://api.themoviedb.org/3/discover/movie?
+    // api_key=114fe6670282f6a632638661e5e86dee&
+    // language=en-US&
+    // sort_by=popularity.desc&
+    // include_adult=false&
+    // include_video=false&
+    // page=1
 
+    @GET("discover/movie?api_key="+ BuildConfig.API_KEY+"&language=en_US")
+    Observable<MoviesListResponse> getMovies(@Query("sort_by") String sortBy, @Query("page") String pageNumber);
 
 }

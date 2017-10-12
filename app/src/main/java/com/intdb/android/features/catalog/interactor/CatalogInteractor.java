@@ -9,7 +9,9 @@ public interface CatalogInteractor extends BaseInteractor {
 
     boolean isNetworkConnected();
 
-    void fetchMoviesPage(int pageNumber, OnFetchDataListener onFetchDataListener);
+    void fetchCarousalPage(String sortBy, int pageNumber, OnFetchDataListener onFetchDataListener);
+
+//    void fetchCarousalPage(CarousalModule carousalModule, OnFetchDataListener listener);
 
     interface OnFetchDataListener {
 

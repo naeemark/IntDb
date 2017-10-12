@@ -3,6 +3,7 @@
 
     <!--Prompts-->
     <string name="loading">Loading&#8230;</string>
+    <string name="loading_more">Loading more&#8230;</string>
     <string name="loading_resources">Loading Resources&#8230;</string>
 
     <!--Errors-->
@@ -12,5 +13,8 @@
     <!--Labels-->
     <string name="lbl_activity_catalog">Catalogue</string>
     <string name="lbl_poster">poster</string>
+    <string name="carousel_title_popular">Popular</string>
+    <string name="carousel_title_top_rated">Top Rated</string>
+    <string name="carousel_title_top_revenue">Revenue</string>
 
 </resources>

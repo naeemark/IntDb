@@ -11,4 +11,25 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="CarouselTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_carousel_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/margin_padding_minimal</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="CarouselLoadText">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_carousel_loading</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_margin">@dimen/card_corner_radius</item>
+    </style>
+
+
+
 </resources>

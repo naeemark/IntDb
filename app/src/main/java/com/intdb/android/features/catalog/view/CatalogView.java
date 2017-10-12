@@ -12,5 +12,7 @@ public interface CatalogView extends BaseView {
 
     void loadList();
 
+    void loadList(int pageNumber);
+
     void loadList(List<Movie> list);
 }

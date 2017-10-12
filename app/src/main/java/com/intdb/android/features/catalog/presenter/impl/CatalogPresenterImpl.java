@@ -3,8 +3,11 @@ package com.intdb.android.features.catalog.presenter.impl;
 import android.support.annotation.NonNull;
 
 import com.intdb.android.app.presenter.impl.BasePresenterImpl;
+import com.intdb.android.constants.SortBy;
+import com.intdb.android.features.catalog.CarousalPresenter;
 import com.intdb.android.features.catalog.interactor.CatalogInteractor;
 import com.intdb.android.features.catalog.presenter.CatalogPresenter;
+import com.intdb.android.features.catalog.view.CarousalModule;
 import com.intdb.android.features.catalog.view.CatalogView;
 import com.intdb.android.model.Movie;
 
@@ -31,6 +34,7 @@ public final class CatalogPresenterImpl extends BasePresenterImpl<CatalogView> i
         super.onStart(viewCreated);
 
         if (viewCreated) {
+            assert mView != null;
             mView.loadList();
         }
 
@@ -42,7 +46,14 @@ public final class CatalogPresenterImpl extends BasePresenterImpl<CatalogView> i
             assert mView != null;
             mView.showNetworkError();
         } else {
-            mInteractor.fetchMoviesPage(pageNumber, this);
+            mInteractor.fetchCarousalPage(SortBy.POPULARITY, pageNumber, this);
+        }
+    }
+
+    @Override
+    public void loadCarousalModules(CarousalModule... carousalModules) {
+        for (CarousalModule carousalModule : carousalModules) {
+            new CarousalPresenter(carousalModule, mInteractor);
         }
     }
 
