@@ -1,13 +1,16 @@
 package com.intdb.android.features.catalog.presenter;
 
+import android.support.annotation.NonNull;
+
 import com.intdb.android.app.presenter.BasePresenter;
 import com.intdb.android.features.catalog.interactor.CatalogInteractor;
-import com.intdb.android.features.catalog.view.CarousalModule;
+import com.intdb.android.features.catalog.view.impl.CarousalModuleImpl;
 import com.intdb.android.features.catalog.view.CatalogView;
 
-public interface CatalogPresenter extends BasePresenter<CatalogView>, CatalogInteractor.OnFetchDataListener {
+public interface CatalogPresenter extends BasePresenter<CatalogView> {
 
-    void loadMoviesPage(int pageNumber);
+    @NonNull
+    CatalogInteractor getInteractor();
 
-    void loadCarousalModules(CarousalModule... carousalModules);
+    void loadCarousalModules(CarousalModuleImpl... carousalModuleImpls);
 }

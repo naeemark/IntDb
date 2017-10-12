@@ -11,7 +11,7 @@ public interface CatalogInteractor extends BaseInteractor {
 
     void fetchCarousalPage(String sortBy, int pageNumber, OnFetchDataListener onFetchDataListener);
 
-//    void fetchCarousalPage(CarousalModule carousalModule, OnFetchDataListener listener);
+//    void fetchCarousalPage(CarousalModuleImpl carousalModule, OnFetchDataListener listener);
 
     interface OnFetchDataListener {
 

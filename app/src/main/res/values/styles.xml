@@ -28,6 +28,8 @@
         <item name="android:textSize">@dimen/text_size_carousel_loading</item>
         <item name="android:textStyle">italic</item>
         <item name="android:layout_margin">@dimen/card_corner_radius</item>
+        <item name="android:text">@string/loading</item>
+        <item name="android:visibility">gone</item>
     </style>
 
 

@@ -17,9 +17,7 @@
 
         <TextView
             android:id="@+id/textView_carousel_loading"
-            style="@style/CarouselLoadText"
-            android:visibility="gone"
-            android:text="@string/loading_more"/>
+            style="@style/CarouselLoadText"/>
 
     </RelativeLayout>
 

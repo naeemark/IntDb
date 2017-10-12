@@ -1,16 +1,17 @@
 package com.intdb.android.utils;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.intdb.android.BuildConfig;
+import com.intdb.android.R;
 
 import timber.log.Timber;
 
@@ -22,28 +23,22 @@ import timber.log.Timber;
 
 public class ImageUtils {
 
-    public static void loadImage(Context context, ImageView imageView, final ProgressBar progressBar, String path) {
+    public static void loadImage(final Context context, final ImageView imageView, final ProgressBar progressBar, String path) {
 
-        Timber.e("Path: "+ ImageUtils.getPosterUrl(path));
+        String url = ImageUtils.getPosterUrl(path);
+        Timber.e("Path: " + url);
 
         Glide.with(context)
-                .load(ImageUtils.getPosterUrl(path))
+                .load((path == null) ? R.mipmap.ic_launcher_round : url)
+                .asBitmap()
                 .diskCacheStrategy(DiskCacheStrategy.RESULT)
-                .dontAnimate()
-                .listener(new RequestListener<String, GlideDrawable>() {
+                .into(new SimpleTarget<Bitmap>() {
                     @Override
-                    public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                    public void onResourceReady(Bitmap arg0, GlideAnimation<? super Bitmap> arg1) {
                         progressBar.setVisibility(View.GONE);
-                        return false;
+                        imageView.setImageBitmap(arg0);
                     }
-
-                    @Override
-                    public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                        progressBar.setVisibility(View.GONE);
-                        return false;
-                    }
-                })
-                .into(imageView);
+                });
     }
 
     private static String getPosterUrl(String posterPath) {

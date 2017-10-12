@@ -13,16 +13,11 @@ import com.intdb.android.constants.SortBy;
 import com.intdb.android.features.catalog.injection.CatalogViewModule;
 import com.intdb.android.features.catalog.injection.DaggerCatalogViewComponent;
 import com.intdb.android.features.catalog.presenter.CatalogPresenter;
-import com.intdb.android.features.catalog.view.CarousalModule;
 import com.intdb.android.features.catalog.view.CatalogView;
-import com.intdb.android.model.Movie;
-
-import java.util.List;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
-import timber.log.Timber;
 
 public final class CatalogActivity extends BaseActivity<CatalogPresenter, CatalogView> implements CatalogView {
 
@@ -35,10 +30,16 @@ public final class CatalogActivity extends BaseActivity<CatalogPresenter, Catalo
     protected View topRatedCarousal;
     @BindView(R.id.revenue_include_layout_carousel)
     protected View revenueCarousal;
+    @BindView(R.id.new_include_layout_carousel)
+    protected View newReleaseCarousal;
+    @BindView(R.id.all_include_layout_carousel)
+    protected View allItemsCarousal;
 
-    private CarousalModule popularCarousalModule;
-    private CarousalModule topRatedCarousalModule;
-    private CarousalModule revenueCarousalModule;
+    private CarousalModuleImpl mPopularCarousalModuleImpl;
+    private CarousalModuleImpl mTopRatedCarousalModuleImpl;
+    private CarousalModuleImpl mRevenueCarousalModuleImpl;
+    private CarousalModuleImpl mNewReleaseCarousalModuleImpl;
+    private CarousalModuleImpl mAllItemsCarousalModuleImpl;
 
     @Override
     protected void setupComponent(@NonNull AppComponent parentComponent) {
@@ -64,33 +65,24 @@ public final class CatalogActivity extends BaseActivity<CatalogPresenter, Catalo
     protected void onViewReady(Bundle savedInstanceState, Intent intent) {
         super.onViewReady(savedInstanceState, intent);
 
-        popularCarousalModule = new CarousalModule(this, popularCarousal, getString(R.string.carousel_title_popular), SortBy.POPULARITY);
-        topRatedCarousalModule = new CarousalModule(this, topRatedCarousal, getString(R.string.carousel_title_top_rated), SortBy.RATING);
-        revenueCarousalModule = new CarousalModule(this, revenueCarousal, getString(R.string.carousel_title_top_revenue), SortBy.REVENUE);
+        mPopularCarousalModuleImpl = new CarousalModuleImpl(this, popularCarousal, getString(R.string.carousel_title_popular), SortBy.POPULARITY);
+        mTopRatedCarousalModuleImpl = new CarousalModuleImpl(this, topRatedCarousal, getString(R.string.carousel_title_top_rated), SortBy.RATING);
+        mRevenueCarousalModuleImpl = new CarousalModuleImpl(this, revenueCarousal, getString(R.string.carousel_title_top_revenue), SortBy.REVENUE);
+        mNewReleaseCarousalModuleImpl = new CarousalModuleImpl(this, newReleaseCarousal, getString(R.string.carousel_title_top_new), SortBy.NEW_RELEASE);
+        mAllItemsCarousalModuleImpl = new CarousalModuleImpl(this, allItemsCarousal, getString(R.string.carousel_title_top_all), SortBy.All);
 
     }
 
     @Override
-    public void loadList() {
+    public void loadCarousals() {
         assert mPresenter != null;
-        mPresenter.loadCarousalModules(popularCarousalModule, topRatedCarousalModule, revenueCarousalModule);
+        mPresenter.loadCarousalModules(mPopularCarousalModuleImpl,
+                mTopRatedCarousalModuleImpl,
+                mRevenueCarousalModuleImpl,
+                mNewReleaseCarousalModuleImpl,
+                mAllItemsCarousalModuleImpl
+        );
     }
 
-    @Override
-    public void loadList(int pageNumber) {
-        assert mPresenter != null;
-        mPresenter.loadMoviesPage(pageNumber);
-    }
-
-    @Override
-    public void loadList(List<Movie> list) {
-        popularCarousalModule.loadList(list);
-
-    }
-
-    public void loadMoreItems(int pageNumber) {
-        Timber.e("Load More...");
-        loadList(pageNumber);
-    }
 
 }

@@ -63,32 +63,4 @@ public final class CatalogInteractorImpl extends BaseInteractorImpl implements C
             }
         });
     }
-
-//    @Override
-//    public void fetchCarousalPage(final CarousalModule carousalModule, final OnFetchDataListener listener) {
-//        listener.onStart();
-//
-//
-//        Observable<MoviesListResponse> observable = mApiService.getMovies(carousalModule.getSortBy(), String.valueOf(1));
-//
-//        subscribe(observable, new Observer<MoviesListResponse>() {
-//
-//            @Override
-//            public void onCompleted() {
-//                listener.onComplete();
-//            }
-//
-//            @Override
-//            public void onError(Throwable e) {
-//                listener.onFailure(e.getMessage());
-//                listener.onComplete();
-//            }
-//
-//            @Override
-//            public void onNext(MoviesListResponse response) {
-//                List<Movie> movies = mParser.mapMovies(response);
-//                listener.onDataResponse(movies);
-//            }
-//        });
-//    }
 }
