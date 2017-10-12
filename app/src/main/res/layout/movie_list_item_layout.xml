@@ -12,6 +12,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/container_image"
         android:layout_width="@dimen/width_movie_poster"
         android:layout_height="@dimen/height_movie_poster"
         android:gravity="center">

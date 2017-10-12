@@ -23,9 +23,13 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".features.catalog.view.impl.CatalogActivity"
-            android:label="@string/lbl_activity_catalog">
-        </activity>
+        <activity
+            android:name=".features.catalog.view.impl.CatalogActivity"
+            android:label="@string/lbl_activity_catalog"/>
+        <activity
+            android:name=".features.details.ItemDetailsActivity"
+            android:label="@string/lbl_activity_details"/>
+
     </application>
 
 </manifest>

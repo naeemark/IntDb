@@ -1,7 +1,6 @@
 package com.intdb.android.app.view.impl;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
@@ -13,6 +12,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
+
 import com.intdb.android.R;
 import com.intdb.android.app.IntDbApp;
 import com.intdb.android.app.injection.AppComponent;
@@ -20,6 +20,7 @@ import com.intdb.android.app.presenter.BasePresenter;
 import com.intdb.android.app.presenter.loader.PresenterFactory;
 import com.intdb.android.app.presenter.loader.PresenterLoader;
 import com.intdb.android.app.view.BaseView;
+import com.intdb.android.utils.DialogUtils;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -200,10 +201,6 @@ public abstract class BaseActivity<P extends BasePresenter<V>, V> extends AppCom
     }
 
     protected void showAbout() {
-        //DialogUtils.showAboutDialog(this);
-    }
-
-    protected void showLogoutDialog(String prompt, DialogInterface.OnClickListener positiveListener) {
-        //DialogUtils.showLogoutPromptDialog(this, prompt, positiveListener);
+        DialogUtils.showAboutDialog(this);
     }
 }

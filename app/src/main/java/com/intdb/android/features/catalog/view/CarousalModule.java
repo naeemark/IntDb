@@ -23,4 +23,6 @@ public interface CarousalModule {
     void hideLoading();
 
     void showNetworkError();
+
+    void reload();
 }
