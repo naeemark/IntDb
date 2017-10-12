@@ -9,7 +9,6 @@ import com.intdb.android.R;
 import com.intdb.android.features.catalog.presenter.CarousalPresenter;
 import com.intdb.android.features.catalog.view.CarousalModule;
 import com.intdb.android.features.catalog.view.adapter.MoviesAdapter;
-import com.intdb.android.features.catalog.view.impl.CatalogActivity;
 import com.intdb.android.model.Movie;
 
 import java.util.ArrayList;
@@ -36,7 +35,7 @@ public class CarousalModuleImpl implements CarousalModule {
 
     private LinearLayoutManager mLayoutManager;
 
-    private CarousalPresenter mPresenter ;
+    private CarousalPresenter mPresenter;
 
     public CarousalModuleImpl(CatalogActivity activity, View carousalView, String title, String sortBy) {
         mActivity = activity;
@@ -51,8 +50,11 @@ public class CarousalModuleImpl implements CarousalModule {
         mPresenter = presenter;
     }
 
+    /**
+     * Initialized Elements for a single Carousal
+     */
     private void initializeList() {
-        ((TextView)mCarousalView.findViewById(R.id.textView_carousel_title)).setText(mTitle);
+        ((TextView) mCarousalView.findViewById(R.id.textView_carousel_title)).setText(mTitle);
 
         mRecyclerView = mCarousalView.findViewById(R.id.recyclerView_movies);
 
@@ -68,6 +70,9 @@ public class CarousalModuleImpl implements CarousalModule {
     }
 
 
+    /**
+     * includes utility functions required for pagination
+     */
     private RecyclerView.OnScrollListener recyclerViewOnScrollListener = new RecyclerView.OnScrollListener() {
         @Override
         public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -97,12 +102,12 @@ public class CarousalModuleImpl implements CarousalModule {
         private int getNextPageNumber() {
             return (mList.size() / MOVIES_PAGE_SIZE) + 1;
         }
+
+        private boolean isLastPage() {
+            return mList.size() / MOVIES_PAGE_SIZE == LAST_PAGE;
+        }
+
     };
-
-
-    private boolean isLastPage() {
-        return mList.size() / MOVIES_PAGE_SIZE == LAST_PAGE;
-    }
 
     @Override
     public void loadList(List<Movie> list) {
@@ -110,6 +115,9 @@ public class CarousalModuleImpl implements CarousalModule {
         showList();
     }
 
+    /**
+     * resets list of Adapter
+     */
     private void showList() {
         mAdapter.clearList();
         mAdapter.addMovies(mList);
@@ -122,6 +130,9 @@ public class CarousalModuleImpl implements CarousalModule {
         return mSortBy;
     }
 
+    /**
+     * Using to show loading status
+     */
     @Override
     public void showLoading() {
         mCarousalView.findViewById(R.id.textView_carousel_loading).setVisibility(View.VISIBLE);
@@ -132,8 +143,17 @@ public class CarousalModuleImpl implements CarousalModule {
         mCarousalView.findViewById(R.id.textView_carousel_loading).setVisibility(View.GONE);
     }
 
+    /**
+     * Trigers network error by the activity
+     */
     @Override
     public void showNetworkError() {
         mActivity.showNetworkError();
+    }
+
+    @Override
+    public void reload() {
+        mList.clear();
+        mPresenter.fetchCarousalInitialPage();
     }
 }

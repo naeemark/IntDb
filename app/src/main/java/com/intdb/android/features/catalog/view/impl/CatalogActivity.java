@@ -3,6 +3,8 @@ package com.intdb.android.features.catalog.view.impl;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.intdb.android.R;
@@ -84,5 +86,33 @@ public final class CatalogActivity extends BaseActivity<CatalogPresenter, Catalo
         );
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_reload:
+                reload();
+                return true;
+            case R.id.action_about:
+                showAbout();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void reload() {
+        assert mPresenter != null;
+        mPresenter.reloadCarousalModules(mPopularCarousalModuleImpl,
+                mTopRatedCarousalModuleImpl,
+                mRevenueCarousalModuleImpl,
+                mNewReleaseCarousalModuleImpl,
+                mAllItemsCarousalModuleImpl
+        );
+    }
 
 }

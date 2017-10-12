@@ -25,7 +25,11 @@ final class SplashPresenterImpl extends BasePresenterImpl<SplashView> implements
 
         if (viewCreated) {
             startLoading();
-            doSplash();
+            if (!mInteractor.isSplashDone()) {
+                doSplash();
+            } else {
+                launchNextActivity();
+            }
         }
     }
 
@@ -42,7 +46,7 @@ final class SplashPresenterImpl extends BasePresenterImpl<SplashView> implements
     }
 
     @Override
-    public void stopLoading(){
+    public void stopLoading() {
         assert mView != null;
         mView.hideLoading();
         mView.finishActivity();
@@ -51,11 +55,12 @@ final class SplashPresenterImpl extends BasePresenterImpl<SplashView> implements
     @Override
     public void doSplash() {
         mHandler.postDelayed(this, AppConstants.SPLASH_TIME_MILLI_SECONDS);
+        mInteractor.setSpalshDone();
     }
 
     @Override
     public void checkNetwork() {
-        if(!mInteractor.isNetworkConnected()){
+        if (!mInteractor.isNetworkConnected()) {
             assert mView != null;
             mView.showErrorWithMessage(mInteractor.getNoNetworkErrorText());
         }

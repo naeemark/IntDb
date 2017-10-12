@@ -1,13 +1,16 @@
 package com.intdb.android.features.catalog.view.holder;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.intdb.android.R;
-import com.intdb.android.features.catalog.view.impl.CatalogActivity;
+import com.intdb.android.features.details.ItemDetailsActivity;
 import com.intdb.android.model.Movie;
 import com.intdb.android.utils.ImageUtils;
 
@@ -23,6 +26,8 @@ import butterknife.ButterKnife;
 
 public class MovieItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+    @BindView(R.id.container_image)
+    protected View mImageContainer;
     @BindView(R.id.imageView_poster)
     protected ImageView mLogoImageView;
     @BindView(R.id.img_progress)
@@ -48,7 +53,15 @@ public class MovieItemHolder extends RecyclerView.ViewHolder implements View.OnC
 
     @Override
     public void onClick(View v) {
-        ((CatalogActivity)mContext).showToast(mMovie.getTitle() + " clicked!");
+        Intent intent = new Intent(mContext, ItemDetailsActivity.class);
+        intent.putExtra(ItemDetailsActivity.EXTRA_MOVIE, mMovie);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, mImageContainer, ItemDetailsActivity.TRANSITION);
+            mContext.startActivity(intent, options.toBundle());
+        } else {
+            mContext.startActivity(intent);
+        }
     }
 
 }

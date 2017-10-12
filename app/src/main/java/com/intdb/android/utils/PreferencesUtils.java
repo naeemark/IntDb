@@ -15,6 +15,11 @@ import static com.intdb.android.constants.AppConstants.SHARED_PREFS_NAME;
 @Singleton
 public class PreferencesUtils {
 
+
+    public enum PrefKeys {
+        IS_SPLASH_DONE,
+    }
+
     private final SharedPreferences mPref;
 
     @Inject
@@ -30,8 +35,16 @@ public class PreferencesUtils {
         mPref.edit().putString(key, data).apply();
     }
 
+    public void putBoolean(String key, boolean flag) {
+        mPref.edit().putBoolean(key, flag).apply();
+    }
+
     public String getData(String key) {
         return mPref.getString(key, null);
+    }
+
+    public boolean getBoolean(String key) {
+        return mPref.getBoolean(key, false);
     }
 
     public String getString(String key, String defaultValue) {

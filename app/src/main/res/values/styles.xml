@@ -11,6 +11,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--Catalog-->
     <style name="CarouselTitle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -20,6 +21,7 @@
         <item name="android:layout_alignParentStart">true</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
+
     <style name="CarouselLoadText">
         <item name="android:layout_alignParentEnd">true</item>
         <item name="android:layout_centerVertical">true</item>
@@ -31,7 +33,23 @@
         <item name="android:text">@string/loading</item>
         <item name="android:visibility">gone</item>
     </style>
+    <!--Catalog // -->
 
+    <!--Details-->
+    <style name="Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
 
+    <style name="SubTextTitle" parent="Text">
+        <item name="android:textSize">@dimen/subTitleTextSize</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+    <style name="TextTitle" parent="Text">
+        <item name="android:textSize">@dimen/titleTextSize</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--Details // -->
 
 </resources>
