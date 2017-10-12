@@ -28,34 +28,55 @@ public class CarousalPresenterImpl implements CarousalPresenter {
 
     }
 
+    /**
+     * is called when API starts
+     */
     @Override
     public void onStart() {
         isLoading = true;
         mCarousalModule.showLoading();
     }
 
+    /**
+     * called by listener when API get data successfully
+     * @param list
+     */
     @Override
     public void onDataResponse(List<Movie> list) {
         mCarousalModule.loadList(list);
     }
 
+    /**
+     * Handles API failure
+     * @param message
+     */
     @Override
     public void onFailure(String message) {
         isLoading = false;
         mCarousalModule.hideLoading();
     }
 
+    /**
+     * Rx-Android onComplete implemetation
+     */
     @Override
     public void onComplete() {
         isLoading = false;
         mCarousalModule.hideLoading();
     }
 
+    /**
+     * Without pageNumber, takes it for intialPage
+     */
     @Override
     public void fetchCarousalInitialPage() {
         fetchCarousalPage(FIRST_PAGE);
     }
 
+    /**
+     * Fetches a specific page according to the provided parameter
+     * @param pageNumber
+     */
     @Override
     public void fetchCarousalPage(int pageNumber) {
         if (!mInteractor.isNetworkConnected()) {
@@ -65,6 +86,10 @@ public class CarousalPresenterImpl implements CarousalPresenter {
         }
     }
 
+    /**
+     * Exposes status of loading
+     * @return
+     */
     @Override
     public boolean isLoading() {
         return isLoading;

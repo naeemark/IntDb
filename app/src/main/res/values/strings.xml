@@ -11,11 +11,19 @@
 
     <!--Labels-->
     <string name="lbl_activity_catalog">Catalogue</string>
+    <string name="lbl_activity_details">Details</string>
     <string name="lbl_poster">poster</string>
     <string name="carousel_title_popular">Popular</string>
     <string name="carousel_title_top_rated">Top Rated</string>
     <string name="carousel_title_top_revenue">High Revenue</string>
     <string name="carousel_title_top_new">New Release</string>
     <string name="carousel_title_top_all">All Movies</string>
+    <string name="prefix_released_date">Released: %s</string>
+    <string name="suffix_rating">%s |</string>
+    <string name="lbl_about">Developed for Intigral Recruitment on 12/10/2017!</string>
 
+
+    <!--Menu-->
+    <string name="menu_reload">Reload</string>
+    <string name="menu_about">About</string>
 </resources>

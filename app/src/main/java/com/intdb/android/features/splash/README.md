@@ -5,6 +5,7 @@ Shows a mock of splash screen, in an actual scenario, it is used to load resourc
 
 - verirfies network connectivity
 - Mocks a splash delay of `TWO SECONDS` by presenter
+- Shows only on first launch of application
 
 #### Construction Elements / Dependencies ####
 
