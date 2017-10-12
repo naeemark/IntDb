@@ -7,4 +7,6 @@ import com.intdb.android.app.view.BaseView;
 @UiThread
 public interface CatalogView extends BaseView {
 
+    void loadCarousals();
+
 }

@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:scrollbars="none"
     android:layout_height="match_parent"
->
+    tools:context=".features.catalog.view.impl.CatalogActivity">
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/popular_include_layout_carousel"
+            layout="@layout/include_layout_carousel"/>
+
+        <include
+            android:id="@+id/top_rated_include_layout_carousel"
+            layout="@layout/include_layout_carousel"/>
+
+        <include
+            android:id="@+id/revenue_include_layout_carousel"
+            layout="@layout/include_layout_carousel"/>
+
+        <include
+            android:id="@+id/new_include_layout_carousel"
+            layout="@layout/include_layout_carousel"/>
+
+        <include
+            android:id="@+id/all_include_layout_carousel"
+            layout="@layout/include_layout_carousel"/>
+
+    </LinearLayout>
+</ScrollView>

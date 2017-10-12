@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <dimen name="splash_logo_width_height">200dp</dimen>
 
     <dimen name="margin_padding_minimal">5dp</dimen>
     <dimen name="margin_padding_average">10dp</dimen>
     <dimen name="margin_padding_maximum">15dp</dimen>
     <dimen name="margin_padding_maxmax">30dp</dimen>
+
+    <dimen name="width_movie_poster">108dp</dimen>
+    <dimen name="height_movie_poster">162dp</dimen>
+    <dimen name="height_carousel">210dp</dimen>
+
+    <dimen name="height_poster_progress">36dp</dimen>
+    <dimen name="stroke_width_thin">1dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+    <dimen name="card_corner_radius">3dp</dimen>
+
+    <!--Text Size-->
+    <dimen name="text_size_carousel_title">20sp</dimen>
+    <dimen name="text_size_carousel_loading">12sp</dimen>
+
 </resources>
