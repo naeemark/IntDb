@@ -11,7 +11,13 @@ Demonstration of Requirements understanding, proposing a solution and implementa
 
 ### Application Flow ###
 
-_to be provided_
+- A: User Clicks on App Icon for device 
+- B: Splash appear
+- C: After splash delay, Catalogue Screen Appears
+- D: It loads Carousels, if network is available
+- E: Each Carousel is independent and taking care of its own lifecycle
+- F: Swiping a Carousel will fetch the next page of data
+- G: By clicking a poster, it will show the details of that particular item
 
 ## How do I get set up? ##
 
@@ -74,6 +80,16 @@ Please sync and resolve dependencies
 
 Used `Android Lint` and `SonarLint`
 
+## Testing ##
+
+#### Unit testing ####
+
+- A small demonstration of Mokito is included to show, how we could test the app by JUnit
+
+#### UI Testing ####
+
+- A small demonstration of Esspresso testing is also provide
+
 ## Distribution ##
 
 The project can be distributed using [Google Play Store](https://github.com/Triple-T/gradle-play-publisher).
@@ -85,5 +101,15 @@ The project can be distributed using [Google Play Store](https://github.com/Trip
 
 ## Screenshots ##
 
-_to be provided_
+![Screenshot](screenshots/0.png)
+![Screenshot](screenshots/1.png)
+![Screenshot](screenshots/2.png)
+![Screenshot](screenshots/3.png)
+![Screenshot](screenshots/4.png)
+![Screenshot](screenshots/5.png)
+![Screenshot](screenshots/6.png)
+
+![Screenshot](screenshots/7.png)
+
+![Screenshot](screenshots/8.png)
 

@@ -8,14 +8,14 @@ import com.intdb.android.constants.AppConstants;
 
 import javax.inject.Inject;
 
-final class SplashPresenterImpl extends BasePresenterImpl<SplashView> implements SplashPresenter, Runnable {
+public final class SplashPresenterImpl extends BasePresenterImpl<SplashView> implements SplashPresenter, Runnable {
 
     @NonNull
     private final SplashInteractor mInteractor;
     private Handler mHandler = new Handler();
 
     @Inject
-    SplashPresenterImpl(@NonNull SplashInteractor interactor) {
+    public SplashPresenterImpl(@NonNull SplashInteractor interactor) {
         mInteractor = interactor;
     }
 
@@ -62,7 +62,7 @@ final class SplashPresenterImpl extends BasePresenterImpl<SplashView> implements
     public void checkNetwork() {
         if (!mInteractor.isNetworkConnected()) {
             assert mView != null;
-            mView.showErrorWithMessage(mInteractor.getNoNetworkErrorText());
+            mView.showNetworkError();
         }
     }
 

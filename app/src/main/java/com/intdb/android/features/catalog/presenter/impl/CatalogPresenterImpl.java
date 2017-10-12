@@ -31,9 +31,15 @@ public final class CatalogPresenterImpl extends BasePresenterImpl<CatalogView> i
         super.onStart(viewCreated);
 
         if (viewCreated) {
+
             assert mView != null;
-            mView.loadCarousals();
+            if (mInteractor.isNetworkConnected()) {
+                mView.loadCarousals();
+            } else {
+                mView.showNetworkError();
+            }
         }
+
     }
 
     @Override
