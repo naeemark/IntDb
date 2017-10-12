@@ -11,7 +11,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", "\"\""
+        buildConfigField "String", "API_KEY", "\"114fe6670282f6a632638661e5e86dee\""
+        buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/\""
+        buildConfigField "String", "SUFFIX_IMAGE_URL", "\"https://image.tmdb.org/t/p/w370\""
 
     }
     signingConfigs {
