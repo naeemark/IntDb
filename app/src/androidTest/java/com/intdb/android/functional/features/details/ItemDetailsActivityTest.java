@@ -1,4 +1,4 @@
-package com.intdb.android.features.details;
+package com.intdb.android.functional.features.details;
 
 
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
 
 import com.intdb.android.R;
+import com.intdb.android.features.details.ItemDetailsActivity;
 import com.intdb.android.model.Movie;
 
 import org.junit.Before;

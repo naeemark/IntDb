@@ -1,4 +1,4 @@
-package com.intdb.android.features.catalog;
+package com.intdb.android.functional.features.catalog;
 
 
 import android.support.test.InstrumentationRegistry;

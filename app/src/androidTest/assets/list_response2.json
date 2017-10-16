@@ -1,0 +1,386 @@
+{
+  page: 2,
+  total_results: 328681,
+  total_pages: 16435,
+  results: [
+    {
+      vote_count: 0,
+      id: 453395,
+      video: false,
+      vote_average: 0,
+      title: "Doctor Strange 2",
+      popularity: 1.705375,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Doctor Strange 2",
+      genre_ids: [
+        878,
+        14,
+        28
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "Plot unknown. TBA",
+      release_date: "2020-12-31"
+    },
+    {
+      vote_count: 2,
+      id: 145219,
+      video: false,
+      vote_average: 0,
+      title: "The Devil in the White City",
+      popularity: 2.053042,
+      poster_path: null,
+      original_language: "en",
+      original_title: "The Devil in the White City",
+      genre_ids: [
+        36,
+        53
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "Their fates were linked by the magical Chicago World’s Fair of 1893, nicknamed the “White City” for its majestic beauty. Architect Daniel Burnham built it; serial killer Dr. H. H. Holmes used it to lure victims to his World’s Fair Hotel, designed for murder. Both men left behind them a powerful legacy, one of brilliance and energy, the other of sorrow and darkness.",
+      release_date: "2020-12-31"
+    },
+    {
+      vote_count: 0,
+      id: 280239,
+      video: false,
+      vote_average: 0,
+      title: "Trick 'r Treat 2",
+      popularity: 1.240898,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Trick 'r Treat 2",
+      genre_ids: [
+        27
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "A sequel to 2007's "Trick 'r Treat".",
+      release_date: "2020-12-31"
+    },
+    {
+      vote_count: 0,
+      id: 400507,
+      video: false,
+      vote_average: 0,
+      title: "X-Force",
+      popularity: 2.407118,
+      poster_path: "/rbAZ7P9eHQQZp7sKcM36f1OZvF5.jpg",
+      original_language: "en",
+      original_title: "X-Force",
+      genre_ids: [
+        28,
+        878
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "A time-traveler assembles a team of mutants in order to prevent the wrecked future he came from.",
+      release_date: "2020-12-31"
+    },
+    {
+      vote_count: 0,
+      id: 401251,
+      video: false,
+      vote_average: 0,
+      title: "Thrilla in Manilla",
+      popularity: 1.088094,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Thrilla in Manilla",
+      genre_ids: [
+        18,
+        36
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "Ang Lee’s film about the iconic ‘Thrilla in Manila’ 1975 boxing match between Muhammad Ali and Joe Frazier will push cinematic imagery to new levels. “The film will be 3D, shot at 120 frames per second, in 4K. Our actors in the ring will be matched with digital avatars and single-set edited. It will be a whole leap in sensorial [experience].”",
+      release_date: "2020-12-31"
+    },
+    {
+      vote_count: 0,
+      id: 335976,
+      video: false,
+      vote_average: 0,
+      title: "Wanted 2",
+      popularity: 1.53508,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Wanted 2",
+      genre_ids: [
+        53,
+        28,
+        80
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "The plot is not yet known.",
+      release_date: "2020-12-31"
+    },
+    {
+      vote_count: 0,
+      id: 403113,
+      video: false,
+      vote_average: 0,
+      title: "Aleister Arcane",
+      popularity: 1.723416,
+      poster_path: "/xXYs0nx8Sm2ypf0icSDnXaWXt3Q.jpg",
+      original_language: "en",
+      original_title: "Aleister Arcane",
+      genre_ids: [
+        27
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "Based on the 2004 comic, Aleister Arcane told the story of a Los Angeles weatherman named Aleister Green who returns to his hometown to host a midnight horror show a la Elvira. Under the guise of a mad scientist named Aleister Arcane, Green performed little skits until the local sponsors balked at the gore. An incident with two kids leads to him to be put on trial, breaking his spirit and into an early grave. Not long after, grisly activities begin to occur and only the kids have the power to thwart the curse he has laid upon their town.",
+      release_date: "2020-12-31"
+    },
+    {
+      vote_count: 0,
+      id: 438695,
+      video: false,
+      vote_average: 0,
+      title: "Sing 2",
+      popularity: 1.030213,
+      poster_path: "/k0Ou3ebfbRNj8lLmozU9hR81II.jpg",
+      original_language: "en",
+      original_title: "Sing 2",
+      genre_ids: [
+        10402,
+        16,
+        35,
+        18,
+        10751
+      ],
+      backdrop_path: "/qSuFGUOU7YqBAgeHg3SZDzBOe8G.jpg",
+      adult: false,
+      overview: "Sequel to the 2016 animated film, 'Sing'.",
+      release_date: "2020-12-25"
+    },
+    {
+      vote_count: 0,
+      id: 449406,
+      video: false,
+      vote_average: 0,
+      title: "Vivo",
+      popularity: 1.021164,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Vivo",
+      genre_ids: [ ],
+      backdrop_path: null,
+      adult: false,
+      overview: "The film follows a monkey who loves music and adventure, leading him to make a dangerous journey from Havana to Miami to fulfill his destiny.",
+      release_date: "2020-12-18"
+    },
+    {
+      vote_count: 58,
+      id: 76600,
+      video: false,
+      vote_average: 0,
+      title: "Avatar 2",
+      popularity: 7.771212,
+      poster_path: "/wvpOVl37PR21mENpmZKVwrLUsRD.jpg",
+      original_language: "en",
+      original_title: "Avatar 2",
+      genre_ids: [
+        28,
+        12,
+        14,
+        878
+      ],
+      backdrop_path: "/9bwCZypKPBZR5Y0fgkwYnNr5qOz.jpg",
+      adult: false,
+      overview: "A sequel to Avatar (2009).",
+      release_date: "2020-12-16"
+    },
+    {
+      vote_count: 0,
+      id: 431976,
+      video: false,
+      vote_average: 0,
+      title: "Vanished",
+      popularity: 1.02001,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Vanished",
+      genre_ids: [
+        28
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: ""A former marine, Logan Walker (Villagomez), tries to unravel the mystery behind his parents death when he teams up with a CIA agent, Natasha Grace (Caldera), who decrypts a file that had confidential information that reveals the existence of a secret government organization that plans to take over the world by brainwashing everyone through social media, politics and religion. Believing that this organization was responsible for Walker's parents and Grace's partner's death, the two risks their lives to go on this journey to expose the organization and to stop the villains before they are caught and killed."",
+      release_date: "2020-12-06"
+    },
+    {
+      vote_count: 2,
+      id: 338953,
+      video: false,
+      vote_average: 0,
+      title: "Fantastic Beasts and Where to Find Them 3",
+      popularity: 1.539221,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Fantastic Beasts and Where to Find Them 3",
+      genre_ids: [
+        14
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "The adventures of writer Newt Scamander in New York's secret community of witches and wizards seventy years before Harry Potter reads his book in school.",
+      release_date: "2020-11-19"
+    },
+    {
+      vote_count: 1,
+      id: 367738,
+      video: false,
+      vote_average: 0,
+      title: "Untitled Marvel Project (3)",
+      popularity: 1.055296,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Untitled Marvel Project (3)",
+      genre_ids: [ ],
+      backdrop_path: null,
+      adult: false,
+      overview: "An announced Marvel Studios production.",
+      release_date: "2020-11-06"
+    },
+    {
+      vote_count: 0,
+      id: 428947,
+      video: false,
+      vote_average: 0,
+      title: "Q",
+      popularity: 1.0212,
+      poster_path: "/xyd1TpZy05ZAi1tQnw2DwzVccPq.jpg",
+      original_language: "en",
+      original_title: "Q",
+      genre_ids: [
+        18,
+        53
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "As Jaxs and Kai fight to eradicate the world monetary system, Q the creators of the world monetary system begin to wage war on each other and the ultimate battle for control of the momentary system between the Q factions and the people of the New Americas erupts into one of the most strategic economic warfare’s known to mankind.",
+      release_date: "2020-10-12"
+    },
+    {
+      vote_count: 0,
+      id: 463842,
+      video: false,
+      vote_average: 0,
+      title: "The Croods 2",
+      popularity: 1.444375,
+      poster_path: "/q17vQNjzhWtv7LLxWMPeEQfXa0z.jpg",
+      original_language: "en",
+      original_title: "The Croods 2",
+      genre_ids: [
+        14,
+        12,
+        16,
+        35,
+        10751
+      ],
+      backdrop_path: "/xvyIu4iVGQ7adl4Unuf8nsr8ime.jpg",
+      adult: false,
+      overview: "A Sequel to the 2013 animation movie The Croods.",
+      release_date: "2020-09-18"
+    },
+    {
+      vote_count: 0,
+      id: 475557,
+      video: false,
+      vote_average: 0,
+      title: "Untitled Joker Origin Movie",
+      popularity: 1.022483,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Untitled Joker Origin Movie",
+      genre_ids: [
+        80,
+        28,
+        12
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "",
+      release_date: "2020-09-13"
+    },
+    {
+      vote_count: 0,
+      id: 297797,
+      video: false,
+      vote_average: 0,
+      title: "Green Lantern Corps",
+      popularity: 3.367292,
+      poster_path: "/mrShjLyjT6M5FXRDgazgThHdGkJ.jpg",
+      original_language: "en",
+      original_title: "Green Lantern Corps",
+      genre_ids: [
+        28,
+        12,
+        878
+      ],
+      backdrop_path: "/UJ8KVc7Qqy4t95ATlYzdGaUILn.jpg",
+      adult: false,
+      overview: "A group of humans join the Green Lantern Corps, an alien interstellar police force that protects the universe.",
+      release_date: "2020-07-24"
+    },
+    {
+      vote_count: 0,
+      id: 479535,
+      video: false,
+      vote_average: 0,
+      title: "Bob's Burgers",
+      popularity: 1.073257,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Bob's Burgers",
+      genre_ids: [
+        35,
+        16
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "Plot unknown.",
+      release_date: "2020-07-17"
+    },
+    {
+      vote_count: 0,
+      id: 367737,
+      video: false,
+      vote_average: 0,
+      title: "Untitled Marvel Project (2)",
+      popularity: 1.022383,
+      poster_path: null,
+      original_language: "en",
+      original_title: "Untitled Marvel Project (2)",
+      genre_ids: [ ],
+      backdrop_path: null,
+      adult: false,
+      overview: "An announced Marvel Studios production.",
+      release_date: "2020-07-10"
+    },
+    {
+      vote_count: 6,
+      id: 335977,
+      video: false,
+      vote_average: 0,
+      title: "Indiana Jones 5",
+      popularity: 4.597259,
+      poster_path: "/yRMswahTtXGMhkss4eAIKXogkHy.jpg",
+      original_language: "en",
+      original_title: "Indiana Jones 5",
+      genre_ids: [
+        28,
+        12
+      ],
+      backdrop_path: null,
+      adult: false,
+      overview: "",
+      release_date: "2020-07-08"
+    }
+  ]
+}
