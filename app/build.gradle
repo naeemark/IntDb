@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.intdb.android"
         minSdkVersion 21
@@ -37,7 +37,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            versionNameSuffix "-debug"
             debuggable true
         }
         renameBuildFile()
@@ -45,20 +44,19 @@ android {
 }
 
 def renameBuildFile() {
-    android.applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            def file = output.outputFile
-            def newName = rootProject.name + "-v" + versionName + "-" + new Date().format('ddMMyy') + ".apk"
-            output.outputFile = new File(file.parent, newName)
+      android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def newName = rootProject.name + "-${variant.name}-v${variant.versionName}-" + new Date().format('ddMMyy') + ".apk"
+            outputFileName = newName
         }
     }
 }
 
 dependencies {
 
-    final SUPPORT_LIBRARY_VERSION = '26.0.0-alpha1'
+    final SUPPORT_LIBRARY_VERSION = '26.1.0'
     final RETROFIT_VERSION = '2.3.0'
-    final BUTTERKNIFE_VERSION = '8.6.0'
+    final BUTTERKNIFE_VERSION = '8.8.1'
     final FAV_BTN_VERSION = '0.1.4'
     final GLIDE_VERSION = '3.7.0'
     final JUNIT_VERSION = '4.12'
